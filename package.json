@@ -1,0 +1,39 @@
+{
+  "name": "@honglinwei/arcade-core",
+  "version": "1.0.0",
+  "description": "Game logic for 2048: move, spawn, hasMoves and score.",
+  "keywords": ["2048", "game", "puzzle", "pure-functions", "typescript"],
+  "license": "MIT",
+  "author": "Honglin Wei",
+  "homepage": "https://github.com/grapefruit-leaf/arcade-core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grapefruit-leaf/arcade-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grapefruit-leaf/arcade-core/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "CHANGELOG.md"],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/core.test.ts",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^6.0.0"
+  }
+}
