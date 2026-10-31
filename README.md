@@ -49,7 +49,7 @@ score(next); // 16
 | `move(board, direction)` | A new board with every tile slid as far as it can go toward `'up'`, `'down'`, `'left'` or `'right'`. Equal neighbours merge once each. Throws a `TypeError` for an unknown direction. |
 | `spawn(board, rng?)` | A new board with a 2 (90%) or a 4 (10%) in a random empty cell. A full board is returned unchanged. |
 | `hasMoves(board)` | `true` if any direction would still change the board, `false` when the game is over. |
-| `score(board)` | The points earned by the move that produced `board`: the total of every tile created by a merge. |
+| `score(board)` | Note: I implemented this before instruction was updated on 10/26. The points earned by the move that produced `board`: the total of every tile created by a merge. |
 | `canMove(board, direction)` | `true` if moving in `direction` changes the board. |
 | `hasWon(board, target = 2048)` | `true` once any tile reaches `target`. |
 | `createBoard(size = 4)` | An empty `size` × `size` board. |

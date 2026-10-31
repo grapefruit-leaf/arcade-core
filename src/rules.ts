@@ -82,6 +82,7 @@ export function spawn(board: Board, rng: Rng = Math.random): Board {
   return board.map((cells, r) => (r === row ? cells.map((cell, c) => (c === col ? tile : cell)) : cells));
 }
 
+// Note: I implemented this before instruction was updated on 10/26
 export function score(board: Board): number {
   return tilesOf(board).reduce((points, tile) => points + (tile.mergedFrom ? tile.value : 0), 0);
 }
